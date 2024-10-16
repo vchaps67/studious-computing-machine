@@ -1,21 +1,34 @@
 # studious-computing-machine
 Data Analytics Project Portfolio
 Welcome to my Data Analytics Project Portfolio! This repository showcases a collection of projects that highlight my skills and expertise in data analysis, visualization, and interpretation. Each project utilizes various tools and techniques to derive insights from data, solve real-world problems, and support decision-making processes.
+
 Table of Contents
+
 About Me
-Projects
-Project 1: Title
-Project 2: Title
-Project 3: Title
-Technologies Used
-Getting Started
-Contact
-About Me
-I am a passionate data analyst with experience in extracting, analyzing, and visualizing data to uncover meaningful insights. My expertise includes working with various data analysis tools and programming languages, allowing me to approach problems from different angles.
 
 Projects
+
+Project 1: Payment Fraud
+
+Project 2: 
+
+Project 3: 
+
+Contact
+
+About Me
+
+I am a passionate data analyst with experience in extracting, analyzing, and visualizing data to uncover meaningful insights. My expertise includes working with various data analysis tools and programming languages, allowing me to approach problems from different angles.
+
+
+Projects
+
 Project 1: Payment Fraud Detection
+
 Description: This project is about detection on payment fraud using a number of models. Intial data was lablled with no observable outliers. The aim of the project is to increase the time to detect fraud and thus reduce the impcat of the fraud. Its aslo tries to enhace the develdopment of fraud prevention strategies.  There were no observable fraud patterns from the data set. However the decstion tree and ensemble methods perfommed well, but oulier methods like IsolationForest performed poorly
+
 Tools Used:  Python.
+
+Link:https://github.com/vchaps67/studious-computing-machine/blob/main/payment_fraud.ipynb
 Key Findings: Detection of novel fraud methods for dataset with little or no obervable outliers is a problem
 Link: 
