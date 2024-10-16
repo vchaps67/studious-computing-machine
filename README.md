@@ -29,6 +29,6 @@ Description: This project is about detection on payment fraud using a number of 
 
 Tools Used:  Python.
 
-Link:https://github.com/vchaps67/studious-computing-machine/blob/main/payment_fraud.ipynb
 Key Findings: Detection of novel fraud methods for dataset with little or no obervable outliers is a problem
-Link: 
+
+Link: https://github.com/vchaps67/studious-computing-machine/blob/main/payment_fraud.ipynb
