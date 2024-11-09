@@ -10,7 +10,7 @@ Projects
 
 Project 1: Payment Fraud
 
-Project 2: 
+Project 2:Bank Card Fraud Detection Dashboard Project
 
 Project 3: 
 
@@ -32,3 +32,18 @@ Tools Used:  Python.
 Key Findings: Detection of novel fraud methods for dataset with little or no obervable outliers is a problem
 
 Link: https://github.com/vchaps67/studious-computing-machine/blob/main/payment_fraud.ipynb
+
+Project 2: Bank Card Fraud Dashboard
+
+Description :  Developed an interactive fraud detection dashboard to monitor and analyze credit card transactions, enabling real-time fraud monitoring, fraud status at a particular point in time  and pattern recognition. 
+
+Tools: Tableau, Python
+
+Key Objectives
+Monitor fraud patterns and trends in real-time
+Identify high-risk transaction patterns
+Track geographical distribution of fraudulent activities
+Analyze customer segments and fraud occurrence
+Measure and visualize key fraud metrics
+
+Link: https://public.tableau.com/authoring/CreditCardFraudDashboard_17311558849130/Dashboard1#1
