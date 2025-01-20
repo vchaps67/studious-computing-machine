@@ -12,7 +12,7 @@ Project 1: Payment Fraud
 
 Project 2:Bank Card Fraud Detection Dashboard Project
 
-Project 3: 
+Project 3: Excel Online Payment Dashboard
 
 Contact
 
@@ -47,3 +47,16 @@ Analyze customer segments and fraud occurrence
 Measure and visualize key fraud metrics
 
 Link: https://public.tableau.com/authoring/CreditCardFraudDashboard_17311558849130/Dashboard1#1
+
+
+Project 3: Excel Online Payment Dashboard
+
+Description:  Develped an interactive Excel dashboard to provide strategic fraud insights over time
+
+Tools: Excel
+
+Key Objectives
+
+Provide a strategice view of online payment fraud over time
+
+Link : https://github.com/vchaps67/studious-computing-machine/commit/5c1ccbcb86872984e15193784f5601e62cdd35ef
