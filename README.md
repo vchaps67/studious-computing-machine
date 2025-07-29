@@ -1,5 +1,5 @@
 # studious-computing-machine
-Data Analytics Project Portfolio
+Data  Project Portfolio
 Welcome to my Data  Project Portfolio! This repository showcases a collection of projects that highlight my skills and expertise in data projects. Each project utilizes various tools and techniques to derive insights from data, solve real-world problems, and support decision-making processes.
 
 Table of Contents
