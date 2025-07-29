@@ -10,7 +10,7 @@ Projects
 
 Project 1 : IRSF Fraud Detection using Supervised and Unsupervised Machine Learning
 
-Project 2: Payment Fraud
+Project 2: GPON Fault Detection using Machine Learning
 
 Project 3:Bank Card Fraud Detection Dashboard Project
 
@@ -25,7 +25,7 @@ I am a passionate  about all things data.
 
 Projects
 
-# IRSF Fraud Detection using Supervised and Unsupervised Machine Learning
+Project 1:  IRSF Fraud Detection using Supervised and Unsupervised Machine Learning
 
 This project simulates and detects International Revenue Share Fraud (IRSF) using synthetic Call Detail Records (CDRs). We explore both supervised and unsupervised learning models to identify anomalous calling behavior and compare their performance.
 
@@ -135,14 +135,58 @@ Zimbabwe | AI for Good | Telecom Risk & Analytics
 
 
 
+Project 2: GPON Fault Detection using Machine Learning
+This project applies both supervised and unsupervised machine learning techniques to detect faults in a GPON (Gigabit Passive Optical Network) system. It compares the performance of Random Forest and Isolation Forest models on synthetic fault data to illustrate how AI can help in predictive maintenance and service assurance in telecommunications.
 
 
+🔍 Objective
+To proactively detect network faults in GPON infrastructure using ML techniques, helping reduce downtime and improve network performance.
 
+🛠️ Project Highlights
+✅ Supervised Learning with RandomForestClassifier
 
+🔍 Unsupervised Learning with IsolationForest
 
+📊 Confusion matrices and classification reports for model evaluation
 
+🧪 Feature scaling with StandardScaler
 
+🧠 Built using scikit-learn, pandas, seaborn, and matplotlib
 
+📁 Dataset
+A synthetic dataset was generated with 1000 records and includes features such as:
+
+signal_strength
+
+latency
+
+packet_loss
+
+jitter
+
+uptime
+
+rx_power
+
+tx_power
+
+fault (0: normal, 1: fault)
+
+🧪 Results
+🔹 Random Forest (Supervised)
+High precision and recall for both fault and normal states.
+
+Robust performance in labeled environments.
+
+Best suited for structured and labeled operational datasets.
+
+🔹 Isolation Forest (Unsupervised)
+Useful for anomaly detection without labeled data.
+
+Good at identifying abnormal patterns that may indicate faults.
+
+📈 Visualization
+Two confusion matrices compare the predictive power of the two models, showing that supervised models like Random Forest outperform unsupervised ones when labels are available. However, Isolation Forest remains a valuable tool in real-world, label-sparse environments.
 
 
 
