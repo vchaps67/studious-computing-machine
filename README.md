@@ -122,71 +122,106 @@ We created additional features from the original data:
 - `cdr_dataset.csv`: Synthetic data (optional)
 - `README.md`: This file
 
----
 
-## 🚀 Author
 
-Vincent Chaparadza  
-Cybersecurity & Data Science Enthusiast  
-Zimbabwe | AI for Good | Telecom Risk & Analytics
 
 ---
+project 2: GPON Fault Prediction System  
+**Proactive Fault Detection in Fiber Access Networks Using Machine Learning**
+
+---
+
+## 📌 Project Overview
+
+This project applies machine learning to predict faults in GPON (Gigabit Passive Optical Network) systems. Using both supervised and unsupervised models, the system identifies high-risk ONTs and recommends proactive interventions. The goal is to reduce downtime, lower operational costs, and enhance customer satisfaction.
+
+---
+
+## ⚙️ System Workflow
+
+```text
+1. Synthetic GPON Data Generation (10,000 records)
+2. Exploratory Data Analysis
+3. Supervised Model Training (XGBoost, RF, etc.)
+4. Unsupervised Anomaly Detection (Isolation Forest, DBSCAN)
+5. Feature Importance Evaluation
+6. Deployment Strategy Formulation
+7. Real-Time Monitoring and Alerting Design
+8. Cost-Benefit Impact Assessment
+
+📊 Dataset Summary
+Total Samples: 10,000 ONT data points
+
+Features: 16 (e.g., TX/RX power, error rate, temperature)
+
+Fault Rate: ~27.3% (binary label)
+
+Train-Test Split: 80% - 20% (8,000 train / 2,000 test)
+
+📈 Model Performance Summary
+Model	AUC Score	Accuracy	Fault F1 Score
+✅ XGBoost	0.9940	0.97	0.95
+Random Forest	0.9918	0.97	0.95
+Logistic Regression	0.9814	0.95	0.90
+SVM	0.9796	0.95	0.91
+Decision Tree	0.9486	0.96	0.93
+Isolation Forest	0.7302	0.79	0.42
+DBSCAN	0.5000	0.27	0.43
+
+🔍 Top 10 Features Influencing Faults
+Feature	Importance
+error_rate	31.7%
+tx_power_dbm	25.6%
+rx_power_dbm	18.4%
+power_budget_db	13.0%
+snr_estimate_db	5.3%
+ont_age_years	0.94%
+bend_loss_db	0.92%
+splitter_loss_db	0.91%
+traffic_utilization_pct	0.86%
+temperature_c	0.83%
+
+🚀 Deployment Strategy
+Primary Model
+XGBoost – Best performing supervised model (AUC: 0.994)
+
+Integrated with Isolation Forest for anomaly detection
+
+Thresholds
+High Risk (Red): Probability > 0.8 → Immediate Action
+
+Medium Risk (Yellow): 0.5–0.8 → Maintenance Scheduling
+
+Low Risk (Green): 0.2–0.5 → Monitor
+
+🔧 Monitoring & Alerting
+KPI Triggers:
+
+RX Power < -25 dBm
+
+Error Rate > 0.01
+
+Power Budget Deviation
+
+Extreme Temperature Shifts
+
+Alert Levels:
+
+Level 1: Automated diagnostics
+
+Level 2: Predictive technician dispatch
+
+Level 3: Emergency response
+
+🛠 Preventive Maintenance Plan
+Risk Level	Inspection Frequency	Action Items
+High Risk	Monthly	ONT replacement, fiber cleaning
+Medium Risk	Quarterly	Signal integrity checks
+Low Risk	Annually	Environmental audit, documentation review
+
+--
 
 
-
-
-Project 2: GPON Fault Detection using Machine Learning
-This project applies both supervised and unsupervised machine learning techniques to detect faults in a GPON (Gigabit Passive Optical Network) system. It compares the performance of Random Forest and Isolation Forest models on synthetic fault data to illustrate how AI can help in predictive maintenance and service assurance in telecommunications.
-
-
-🔍 Objective
-To proactively detect network faults in GPON infrastructure using ML techniques, helping reduce downtime and improve network performance.
-
-🛠️ Project Highlights
-✅ Supervised Learning with RandomForestClassifier
-
-🔍 Unsupervised Learning with IsolationForest
-
-📊 Confusion matrices and classification reports for model evaluation
-
-🧪 Feature scaling with StandardScaler
-
-🧠 Built using scikit-learn, pandas, seaborn, and matplotlib
-
-📁 Dataset
-A synthetic dataset was generated with 1000 records and includes features such as:
-
-signal_strength
-
-latency
-
-packet_loss
-
-jitter
-
-uptime
-
-rx_power
-
-tx_power
-
-fault (0: normal, 1: fault)
-
-🧪 Results
-🔹 Random Forest (Supervised)
-High precision and recall for both fault and normal states.
-
-Robust performance in labeled environments.
-
-Best suited for structured and labeled operational datasets.
-
-🔹 Isolation Forest (Unsupervised)
-Useful for anomaly detection without labeled data.
-
-Good at identifying abnormal patterns that may indicate faults.
-
-📈 Visualization
-Two confusion matrices compare the predictive power of the two models, showing that supervised models like Random Forest outperform unsupervised ones when labels are available. However, Isolation Forest remains a valuable tool in real-world, label-sparse environments.
 
 
 
