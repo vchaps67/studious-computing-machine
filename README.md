@@ -12,9 +12,9 @@ Project 1 : IRSF Fraud Detection using Supervised and Unsupervised Machine Learn
 
 Project 2: GPON Fault Detection using Machine Learning
 
-Project 3:Bank Card Fraud Detection Dashboard Project
+Project 3: Phishing Website Detector
 
-Project 4: Excel Online Payment Dashboard
+
 
 Contact
 
@@ -221,44 +221,97 @@ Low Risk	Annually	Environmental audit, documentation review
 
 --
 
+Project 3: Phishing Website Detection System
+A machine learning-powered system to detect phishing websites using URL analysis and metadata features. This project implements multiple ML models and provides both a command-line interface and an interactive Streamlit dashboard for real-time phishing detection.
+🎯 Problem Statement
+Phishing attacks continue to be one of the most prevalent cybersecurity threats, with over 1.2 million phishing websites created monthly. Traditional blacklist-based approaches are reactive and easily bypassed. This project develops a proactive ML-based detection system that analyzes URL characteristics and website metadata to identify potential phishing sites in real-time.
+🏗️ Architecture Overview
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   URL Input     │───▶│  Feature Engine  │───▶│   ML Models    │
+│                 │    │                  │    │                 │
+│ • User Input    │    │ • URL Analysis   │    │ • Random Forest │
+│ • Browser Plugin│    │ • Domain Check   │    │ • Gradient Boost│
+│ • Batch Files   │    │ • WHOIS Data     │    │ • Neural Network│
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+                                 │                        │
+                                 ▼                        ▼
+                       ┌──────────────────┐    ┌─────────────────┐
+                       │ Feature Vector   │    │   Prediction    │
+                       │                  │    │                 │
+                       │ • URL Features   │    │ • Risk Score    │
+                       │ • Domain Features│    │ • Classification │
+                       │ • Content Features│    │ • Confidence    │
+                       └──────────────────┘    └─────────────────┘
+📊 Dataset & Data Sources
+Primary Data Sources
+
+PhishTank: Real-time phishing URL database
+OpenPhish: Community-driven phishing intelligence
+Alexa Top 1M: Legitimate website samples
+Custom Web Scraping: Additional legitimate URLs
+
+Dataset Statistics
+
+Training Data: ~100,000 URLs (50% phishing, 50% legitimate)
+Features: 30+ engineered features
+Update Frequency: Daily refreshes from live feeds
+
+🔧 Feature Engineering
+URL-Based Features (20 features)
+python# URL Structure Analysis
+- url_length: Length of the URL
+- num_dots: Number of dots in URL
+- num_hyphens: Number of hyphens
+- num_underscores: Number of underscores
+- num_slashes: Number of forward slashes
+- num_questionmarks: Number of question marks
+- num_equals: Number of equal signs
+- num_ats: Number of @ symbols
+- num_ampersands: Number of & symbols
+- num_exclamations: Number of exclamation marks
+- num_spaces: Number of spaces (encoded or not)
+- num_tildes: Number of tildes
+- num_commas: Number of commas
+- num_semicolons: Number of semicolons
+- num_dollars: Number of dollar signs
+- num_percentages: Number of percentage signs
+- shortening_service: Binary flag for URL shorteners
+- ip_address: Binary flag if domain is IP address
+- suspicious_tld: Binary flag for suspicious TLDs
+- suspicious_keywords: Count of suspicious keywords
+Domain-Based Features (8 features)
+python# Domain Analysis
+- domain_length: Length of domain name
+- domain_age: Age of domain in days
+- domain_entropy: Shannon entropy of domain
+- subdomain_count: Number of subdomains
+- has_https: HTTPS availability
+- ssl_cert_valid: SSL certificate validity
+- domain_reputation: Reputation score from threat feeds
+- registrar_reputation: Registrar trustworthiness score
+Content-Based Features (5 features)
+python# Website Content Analysis
+- title_similarity: Similarity to known brands
+- favicon_similarity: Favicon comparison with legitimate sites
+- form_count: Number of forms on page
+- external_links: Number of external links
+- javascript_suspicious: Suspicious JavaScript patterns
+🤖 Machine Learning Models
+Model Comparison
+ModelAccuracyPrecisionRecallF1-ScoreTraining TimeRandom Forest96.2%95.8%96.6%96.2%45sGradient Boosting97.1%96.9%97.3%97.1%2m 15sXGBoost97.3%97.1%97.5%97.3%1m 30sNeural Network96.8%96.5%97.1%96.8%3m 45s
+Best Model: XGBoost
+python# Optimized hyperparameters
+best_params = {
+    'n_estimators': 500,
+    'max_depth': 8,
+    'learning_rate': 0.1,
+    'subsample': 0.8,
+    'colsample_bytree': 0.8,
+    'min_child_weight': 3,
+    'gamma': 0.1,
+    'reg_alpha': 0.1,
+    'reg_lambda': 1.0
+}
 
 
 
-
-Project 1: Payment Fraud Detection
-
-Description: This project is about detection on payment fraud using a number of models. Intial data was lablled with no observable outliers. The aim of the project is to increase the time to detect fraud and thus reduce the impcat of the fraud. Its aslo tries to enhace the develdopment of fraud prevention strategies.  There were no observable fraud patterns from the data set. However the decstion tree and ensemble methods perfommed well, but oulier methods like IsolationForest performed poorly
-
-Tools Used:  Python.
-
-Key Findings: Detection of novel fraud methods for dataset with little or no obervable outliers is a problem
-
-Link: https://github.com/vchaps67/studious-computing-machine/blob/main/payment_fraud.ipynb
-
-Project 2: Bank Card Fraud Dashboard
-
-Description :  Developed an interactive fraud detection dashboard to monitor and analyze credit card transactions, enabling real-time fraud monitoring, fraud status at a particular point in time  and pattern recognition. 
-
-Tools: Tableau, Python
-
-Key Objectives
-Monitor fraud patterns and trends in real-time
-Identify high-risk transaction patterns
-Track geographical distribution of fraudulent activities
-Analyze customer segments and fraud occurrence
-Measure and visualize key fraud metrics
-
-Link: https://public.tableau.com/authoring/CreditCardFraudDashboard_17311558849130/Dashboard1#1
-
-
-Project 3: Excel Online Payment Dashboard
-
-Description:  Develped an interactive Excel dashboard to provide strategic fraud insights over time
-
-Tools: Excel
-
-Key Objectives
-
-Provide a strategice view of online payment fraud over time
-
-Link : https://github.com/vchaps67/studious-computing-machine/commit/5c1ccbcb86872984e15193784f5601e62cdd35ef
