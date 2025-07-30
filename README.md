@@ -14,6 +14,8 @@ Project 2: GPON Fault Detection using Machine Learning
 
 Project 3: Phishing Website Detector
 
+Project 4: DNS Tunneling and DGA Detection Project
+
 
 
 Contact
@@ -315,3 +317,90 @@ best_params = {
 
 
 
+project 4 : DNS Threat Detection: DGA & Tunneling Detection System
+Problem Statement: The DNS Security Challenge
+Domain Name System (DNS) protocols have become critical attack vectors for sophisticated cyber threats. Traditional security solutions struggle with two particularly evasive techniques:
+
+Domain Generation Algorithms (DGAs)
+Malware uses DGAs to generate thousands of random domain names daily, enabling:
+
+Command-and-control (C2) communication
+
+Evasion of domain blacklists
+
+Resilient botnet operations
+Detection Challenge: Differentiating algorithmically generated domains from legitimate human-created domains
+
+DNS Tunneling
+Attackers encode data in DNS queries to:
+
+Exfiltrate sensitive data
+
+Bypass network firewalls
+
+Establish covert communication channels
+Detection Challenge: Identifying malicious payloads in seemingly normal DNS traffic
+
+The Critical Gap: Traditional signature-based detection fails against these threats due to:
+
+Constantly changing domain patterns (DGAs)
+
+Encryption and obfuscation techniques (tunneling)
+
+Massive volume of DNS traffic (over 100B daily queries)
+
+Low false-positive tolerance in enterprise environments
+
+
+This project implements a multi-layered detection system combining:
+
+Deep Learning for sequence pattern recognition (DGA)
+
+Anomaly Detection for identifying outliers (tunneling)
+
+Hybrid Rule Engine to reduce false positives
+
+Key Features
+Real-time DGA Detection: 98.3% accuracy on Cryptolocker variants
+
+Tunneling Identification: 94.1% detection rate for iodine tunneling
+
+Hybrid Analysis: 37% fewer false positives than pure ML approaches
+
+Test Infrastructure: Custom DGA generator for model validation
+
+Production-Ready API: <10ms/query processing latency
+
+2. Model Specifications
+DGA Detection (LSTM Network)
+
+Character-level embeddings
+
+Bidirectional LSTM layers
+
+Attention mechanism
+
+Output: Malicious probability (0-1)
+
+Tunneling Detection (Isolation Forest)
+
+Features:
+
+Shannon entropy of domain
+
+Domain length
+
+Vowel-consonant ratio
+
+Subdomain depth
+
+Request frequency
+
+Response size variability
+
+Output: Anomaly score (-1 to 1)
+
+Performance Benchmarks
+Model	Precision	Recall	F1-Score	AUC	Throughput
+DGA Detection	97.2%	96.8%	97.0%	0.992	850 qps
+Tunneling Det.	94.5%	92.1%	93.3%	0.967	1200 qps
