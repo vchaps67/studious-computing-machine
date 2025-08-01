@@ -8,7 +8,7 @@ About Me
 
 Projects
 
-Project 1: Telecom LTE Network Capacity Planning: Advanced ML Pipeline
+Project 1: Telecom LTE Network Capacity Planning
 
 Project 2 : IRSF Fraud Detection using Supervised and Unsupervised Machine Learning
 
@@ -17,6 +17,8 @@ Project 3: GPON Fault Detection using Machine Learning
 Project 4: Phishing Website Detector
 
 Project 5: DNS Tunneling and DGA Detection Project
+
+PROJECT 6: Network Investment ROI Optimization 
 
 
 
@@ -521,3 +523,131 @@ Performance Benchmarks
 Model	Precision	Recall	F1-Score	AUC	Throughput
 DGA Detection	97.2%	96.8%	97.0%	0.992	850 qps
 Tunneling Det.	94.5%	92.1%	93.3%	0.967	1200 qps
+
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+PROJECT 6: Network Investment ROI Optimization 
+Maximizing Network ROI in Telecommunications using Applied Machine Learning
+
+🧠 Overview
+This project showcases an end-to-end ML-driven framework to optimize ROI (Return on Investment) in telecom network infrastructure. By combining real-world domain insights with machine learning, the solution provides data-driven strategies to:
+
+Maximize site profitability
+
+Optimize spectrum utilization
+
+Identify infrastructure sharing opportunities
+
+Boost data center and cloud service returns
+
+Using a synthetic yet realistic telecom dataset with 5,000+ network sites, the framework builds robust models that guide network investment decisions, potentially improving ROI by 20–40%.
+
+🎯 Key Business Goals
+Objective	Outcome
+📍 Site Profitability Optimization	Predict and enhance underperforming site ROIs
+📡 Spectrum Utilization Optimization	Reallocate bandwidth & bands for efficient resource use
+🏗 Infrastructure Sharing Opportunities	Cluster sites for CAPEX/OPEX savings via shared deployments
+☁️ Cloud & Data Center ROI Insights	Identify low utilization and high-revenue opportunities
+
+⚙️ Technology Stack
+Languages: Python
+
+ML Libraries: scikit-learn, XGBoost, GradientBoosting, KMeans
+
+Data Processing: pandas, NumPy, LabelEncoder, StandardScaler
+
+Visualization: matplotlib, seaborn
+
+Model Evaluation: R² Score, MAE, RMSE
+
+🧩 Dataset Highlights
+The project generates a realistic telecom dataset featuring:
+
+Site Types: Macro, Micro, Small Cell, Edge Node, Data Center
+
+Regions: Urban, Rural, Highway, Commercial, etc.
+
+Features: Coverage, CAPEX, OPEX, traffic, latency, revenue streams
+
+KPIs: Monthly ROI, Profit Margin, Spectrum Efficiency, Utilization
+
+🧪 5000+ sites, 40+ features, and engineered KPIs to simulate business dynamics.
+
+🧮 ML Modules
+1. 📈 Site Profitability Prediction
+Uses XGBoost, RandomForest, and GradientBoosting
+
+Predicts monthly ROI per site
+
+Identifies top 50 sites with highest improvement potential
+
+Reveals key profitability drivers (e.g., utilization, region type)
+
+2. 📡 Spectrum Utilization Optimization
+Predicts Revenue per MHz (spectrum efficiency)
+
+Identifies under- and over-utilized spectrum bands
+
+Highlights reallocation and expansion needs
+
+3. 🤝 Infrastructure Sharing Opportunity Detection
+Applies clustering (KMeans) and regression (GradientBoosting)
+
+Quantifies cost-saving potential from shared operations
+
+Segments high-priority clusters for site consolidation
+
+4. ☁️ Data Center & Cloud ROI Analysis
+Flags underutilized data centers
+
+Highlights top 20 cloud revenue sites
+
+Recommends expansion or consolidation
+
+📊 Key Visualizations
+📌 Dashboard Panels	Description
+ROI Distribution	ROI by site type, region, and technology
+Revenue vs Utilization	Heatmaps ROI relative to utilization
+Spectrum Efficiency	Plot of GB/MHz/Band vs revenue
+Sharing Clusters	Visualizes clusters for shared infra savings
+Top ROI Sites	Bar plot of top 20 sites for improvement
+Cost vs Profit	Scatterplot of CAPEX vs monthly profit
+
+Visuals help decision-makers quickly identify actionable insights.
+
+💡 Optimization Recommendations Engine
+Each site receives actionable business insights such as:
+
+Sites to decommission or optimize
+
+Spectrum to reallocate from underutilized to overutilized sites
+
+High-priority clusters for shared infra savings
+
+Underutilized data centers to consolidate
+
+High-revenue cloud locations for expansion
+
+🚀 Translates ML outputs into real-world business strategy
+
+📈 Results Snapshot
+Metric	Value
+✅ Dataset Size	5,000+ telecom sites
+💰 Avg Monthly ROI	~15.2% (predicted)
+📉 Sites with <5% ROI	870
+📡 Underutilized Spectrum Sites	923
+📡 Overutilized Spectrum Sites	610
+💡 High Sharing Priority Sites	678
+☁️ Low Utilization DCs	110
+📈 Predicted ROI Improvement (Top 50 Sites)	+6–12% gain annually
+
+🧠 Skills Demonstrated
+✅ Telecom domain modeling
+✅ Feature engineering & KPI design
+✅ Supervised learning (regression, ensembles)
+✅ Unsupervised learning (clustering)
+✅ Optimization strategy design
+✅ Business impact quantification
+✅ Data storytelling & dashboarding
